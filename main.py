@@ -35,6 +35,9 @@ while is_working:
     nat = 54.815605 - float(NAT)
     long = 1.815605 - float(LONG)
 
+    nat = iss_position[1] - float(NAT)
+    long = iss_position[0] - float(LONG)
+
     if (long < 5 and long > -5) and (nat < 5 and nat > -5):
         with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
